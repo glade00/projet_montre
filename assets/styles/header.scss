@@ -1,4 +1,4 @@
-ul {
+.header_menu ul {
   display: flex;
   justify-content: flex-end;
   align-items: center;
@@ -6,20 +6,20 @@ ul {
   font-family: "Roman SD";
   min-height: 50px;
 }
-ul li {
+.header_menu ul li {
   margin: 10px;
 }
 .header {
   display: grid;
-  grid-template-rows: 50px 200px 200px;
+  grid-template-rows: 50px 1fr;
   grid-template-columns: repeat(3, 1fr);
 }
-.menu {
+.header_menu {
   z-index: 1;
   grid-column-start: 1;
   grid-column-end: 4;
   grid-row-start: 1;
-  grid-row-end: 3;
+  grid-row-end: 2;
 }
 .header_image {
   z-index: 0;
