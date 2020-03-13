@@ -1,0 +1,29 @@
+ul {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  background-color: rgb(222, 184, 135, 0.5);
+  font-family: "Roman SD";
+  min-height: 50px;
+}
+ul li {
+  margin: 10px;
+}
+.header {
+  display: grid;
+  grid-template-rows: 50px 200px 200px;
+  grid-template-columns: repeat(3, 1fr);
+}
+.menu {
+  z-index: 1;
+  grid-column-start: 1;
+  grid-column-end: 4;
+  grid-row-start: 1;
+  grid-row-end: 3;
+}
+.header_image {
+  z-index: 0;
+  grid-column: 1/4;
+  grid-row-start: 1;
+  grid-row-end: 4;
+}

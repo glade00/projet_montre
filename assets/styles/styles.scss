@@ -1,1 +1,18 @@
-@import "reset.css";
+@import "reset.scss";
+@import "header.scss";
+* {
+  box-sizing: border-box;
+}
+
+img {
+  max-width: 100%;
+}
+a {
+  text-decoration: none;
+  color: black;
+}
+
+@font-face {
+  font-family: "Roman SD";
+  src: url("./../fonts/Roman SD.ttf");
+}
