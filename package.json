@@ -18,6 +18,10 @@
   },
   "homepage": "https://github.com/glade00/projet_montre#readme",
   "devDependencies": {
-    "parcel": "^1.12.4"
+    "parcel": "^1.12.4",
+    "sass": "^1.26.3"
+  },
+  "dependencies": {
+    "reset.css": "^2.0.2"
   }
 }
