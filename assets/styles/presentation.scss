@@ -1,0 +1,16 @@
+.presentation {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  text-align: center;
+}
+.presentation_title,
+.presentation_description,
+.presentation_author {
+  margin: 15px;
+}
+
+.presentation_author {
+  font-weight: bold;
+  font-style: oblique;
+}
