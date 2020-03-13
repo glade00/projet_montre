@@ -5,30 +5,30 @@
   flex-direction: column;
   text-align: center;
 }
-.caracteristic_content {
+.caracteristic__content {
   display: grid;
 
   grid-template-rows: repeat(5, 50px);
   grid-template-columns: repeat(6, 1fr);
 }
-.caracteristic_description {
+.caracteristic__description {
   background-color: burlywood;
   padding: 10px;
   z-index: 1;
   place-items: center;
   display: grid;
 }
-.caracteristic_description1 {
+.description1 {
   border-radius: 0% 30% 50% 70%;
   grid-column: 1/4;
   grid-row: 2/4;
 }
-.caracteristic_description2 {
+.description2 {
   border-radius: 50% 0% 30% 70%;
   grid-column: 4/7;
   grid-row: 2/4;
 }
-.caracteristic_image {
+.caracteristic__image {
   background-image: url("./../images/elegance.jpg");
   background-repeat: no-repeat;
   background-attachment: fixed;
@@ -37,7 +37,16 @@
   grid-column: 3/7;
   grid-row: 3/6;
 }
-.caracteristic_title {
+.image1 {
+  grid-column: 3/7;
+  grid-row: 3/6;
+}
+.image2 {
+  grid-column: 1/5;
+  grid-row: 3/6;
+}
+
+.caracteristic__title {
   grid-column: 1/7;
   grid-row: 1/2;
 }

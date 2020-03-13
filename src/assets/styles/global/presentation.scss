@@ -4,13 +4,13 @@
   flex-direction: column;
   text-align: center;
 }
-.presentation_title,
-.presentation_description,
-.presentation_author {
+.presentation__title,
+.presentation__description,
+.presentation__author {
   margin: 15px;
 }
 
-.presentation_author {
+.presentation__author {
   font-weight: bold;
   font-style: oblique;
 }
