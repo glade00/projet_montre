@@ -7,7 +7,7 @@
 }
 .caracteristic__content {
   display: grid;
-
+  margin-top: 20px;
   grid-template-rows: repeat(5, 50px);
   grid-template-columns: repeat(6, 1fr);
 }
@@ -28,15 +28,7 @@
   grid-column: 4/7;
   grid-row: 2/4;
 }
-.caracteristic__image {
-  background-image: url("./../images/elegance.jpg");
-  background-repeat: no-repeat;
-  background-attachment: fixed;
-  background-position: center;
-  z-index: 0;
-  grid-column: 3/7;
-  grid-row: 3/6;
-}
+
 .image1 {
   grid-column: 3/7;
   grid-row: 3/6;
