@@ -3,14 +3,39 @@
   justify-content: center;
   flex-direction: column;
   text-align: center;
+  @include landscape {
+    @media screen and (min-width: 1400px) {
+      display: flex;
+      flex-direction: row;
+      max-width: 80%;
+      margin: auto;
+    }
+  }
 }
 .presentation__title,
 .presentation__description,
 .presentation__author {
   margin: 15px;
 }
-
+.presentation__description,
+.presentation__author {
+  @include landscape {
+    @media screen and (min-width: 1400px) {
+      max-width: 60%;
+      margin: auto;
+      font-size: 22px;
+      padding: 10px 0px;
+    }
+  }
+}
 .presentation__author {
   font-weight: bold;
   font-style: oblique;
+}
+.presentation__image {
+  @include landscape {
+    @media screen and (min-width: 1400px) {
+      display: none;
+    }
+  }
 }

@@ -5,3 +5,8 @@ a {
   text-decoration: none;
   color: black;
 }
+@mixin landscape {
+  @media (min-aspect-ratio: 1/1) {
+    @content;
+  }
+}

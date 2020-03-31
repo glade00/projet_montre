@@ -14,6 +14,7 @@
   grid-template-rows: 50px 1fr;
   grid-template-columns: repeat(3, 1fr);
 }
+
 .header__menu {
   z-index: 1;
   grid-column-start: 1;
@@ -21,9 +22,18 @@
   grid-row-start: 1;
   grid-row-end: 2;
 }
-.header__image {
+.header__images {
   z-index: 0;
   grid-column: 1/4;
   grid-row-start: 1;
   grid-row-end: 4;
+}
+.header__image {
+  @include landscape {
+    @media screen and (min-width: 1400px) {
+      max-height: 300px;
+      object-fit: cover;
+      min-width: 100%;
+    }
+  }
 }
