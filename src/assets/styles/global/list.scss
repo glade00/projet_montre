@@ -1,0 +1,56 @@
+.list {
+  text-align: center;
+  margin: 10px;
+  display: flex;
+  flex-direction: column;
+  @include landscape {
+    @media screen and (min-width: 1400px) {
+      margin: auto;
+      max-width: 80%;
+    }
+  }
+}
+
+.list__title {
+  margin: 50px 0px;
+  border-bottom: 2px solid black;
+  @include landscape {
+    @media screen and (min-width: 1400px) {
+      min-width: 30%;
+      margin: auto;
+      margin-top: 100px;
+      margin-bottom: 50px;
+    }
+  }
+}
+.list__text {
+  @include landscape {
+    @media screen and (min-width: 1400px) {
+      max-width: 50%;
+      margin: auto;
+    }
+  }
+}
+.list_content {
+  display: grid;
+
+  margin: auto;
+  grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
+}
+.list__name {
+  margin: 20px 0px;
+}
+.list_content img {
+  width: 100%;
+  max-height: 500px;
+  min-height: 500px;
+  object-fit: cover;
+}
+
+.list__contact {
+  margin: 20px;
+}
+.contact {
+  font-weight: bold;
+  font-family: "Wes";
+}
