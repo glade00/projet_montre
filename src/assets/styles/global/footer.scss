@@ -1,0 +1,37 @@
+.footer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  margin-top: 10px;
+  background-color: rgb(222, 184, 135, 0.7);
+  font-family: "Wes";
+  font-weight: bold;
+}
+.footer__menu {
+  display: flex;
+  flex-direction: column;
+  max-width: 80%;
+  min-width: 80%;
+}
+.footer__liens {
+  margin: 20px;
+  font-size: 25px;
+  @include landscape {
+    @media screen and (min-width: 1400px) {
+      display: flex;
+      justify-content: space-around;
+    }
+  }
+}
+
+.footer__link {
+  margin: 10px 0px;
+}
+.footer__link:hover {
+  border-bottom: 1px solid black;
+}
+.footer__copyrigth {
+  margin: 20px 0px;
+}
