@@ -8,16 +8,29 @@
   <link rel="stylesheet" href="assets/styles/styles.scss">
   <link rel="stylesheet" href="https://use.typekit.net/muh3ysj.css">
   <title>Document</title>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+  <script>
+    $(document).ready(function () {
+      $('.js-scrollTo').on('click', function () { // Au clic sur un élément
+        var page = $(this).attr('href'); // Page cible
+        var speed = 750; // Durée de l'animation (en ms)
+        $('html, body').animate({
+          scrollTop: $(page).offset().top
+        }, speed); // Go
+        return false;
+      });
+    });
+  </script>
 </head>
 
 <body>
 
   <header class="header">
     <nav class="header__menu">
-      <ul>
-        <li><a href="">Accueil</a> </li>
-        <li><a href="">Une histoire</a> </li>
-        <li><a href="">Contact</a> </li>
+      <ul class="menu__liens">
+        <li class="menu__link"><a class"js-scrollTo" href="#">Accueil</a> </li>
+        <li class="menu__link"><a class="js-scrollTo" href="#presentation">Une histoire</a> </li>
+        <li class="menu__link"><a class="js-scrollTo" href="#list">Nos montres</a> </li>
       </ul>
     </nav>
     <picture class="header__images">
@@ -27,7 +40,7 @@
 
   </header>
 
-  <section class="presentation">
+  <section class="presentation" id="presentation">
 
     <div class="presentation__content">
       <h1 class="presentation__title">Une histoire de temps</h1>
@@ -52,67 +65,101 @@
       <h2 class="caracteristic__title">Elegance</h2>
       <p class="caracteristic__description description1">Une touche d'élégance qui vous donne l'heure.</p>
       <img class="caracteristic__image image1" src="assets/images/montre1.jpg" alt="montre1_élégance">
-
     </div>
 
     <div class="caracteristic__content">
       <h2 class="caracteristic__title">Préstance</h2>
-      <p class="caracteristic__description description2">Une allure qui charmera votre entouragegit .</p>
+      <p class="caracteristic__description description2">Une allure qui charmera votre entourage.</p>
       <img class="caracteristic__image image2" src="assets/images/montre2.jpg" alt="montre2_préstance">
-
     </div>
 
     <div class="caracteristic__content">
       <h2 class="caracteristic__title">Unique</h2>
       <p class="caracteristic__description description1">Une montre à votre image, car nous sommes tous unique.</p>
       <img class="caracteristic__image image1" src="assets/images/montre3.jpg" alt="montre3_unique">
-
     </div>
+
   </section>
 
-  <section class="styles">
+  <section class="styles" id="styles">
     <h1 class="styles__title">Plusieurs styles </h1>
     <div class="style">
       <h2 class="style__title">Les montres gousset en bois</h2>
-      <p class="style__content">Pour un style ancien et écologique. Esthétiquement bien
-        travaillé, les montres de poche en bois avantagent le port de la montre à gousset avec des
-        tenues légères et décontractés à porter à toutes occassions.</p>
-      <img src="assets/images/bois.jpg" alt="">
+      <div class="style__description style1">
+        <p class="style__content ">Pour un style ancien et écologique. Esthétiquement bien
+          travaillé, les montres de poche en bois avantagent le port de la montre à gousset avec des
+          tenues légères et décontractés à porter à toutes occassions.</p>
+        <img class="style__image" src="assets/images/bois.jpg" alt="">
+      </div>
+
     </div>
     <div class="style">
       <h2 class="style__title">Les montres gousset steampunk</h2>
-      <p class="style__content">Les montres à goussets steampunk, possèdent un design à part entière unique, issu de la
-        technologie à vapeur,
-        du XIXe et XXe siècle des campagnes anglaises, le steampunk est un mouvement littéraire et artistique à
-        l’univers mêlant machines à vapeur et science-fiction. Rappelez-vous le romancier Jules Vernes et son célèbre
-        sous-marin le Nautilus dans 20.000 lieues sous les mers très en avance sur son temps. </p>
-      <img src="assets/images/steampunk.jpg" alt="">
+      <div class="style__description style2">
+        <p class="style__content ">Les montres à goussets steampunk, possèdent un design à part entière unique,
+          issu de la technologie à vapeur, du XIXe et XXe siècle des campagnes anglaises, le steampunk est un mouvement
+          littéraire et artistique à l’univers mêlant machines à vapeur et science-fiction. Rappelez-vous le romancier
+          Jules Vernes et son célèbre sous-marin le Nautilus dans 20.000 lieues sous les mers très en avance sur son
+          temps. </p>
+        <img class="style__image" src="assets/images/steampunk.jpg" alt="">
+      </div>
+
     </div>
     <div class="style">
       <h2 class="style__title">Les montres gousset de luxe</h2>
-      <p class="style__content">Rechercher des montres à gousset de luxe aux métaux nobles tels que l’or ou l’argent
-        possèdent l’avantage de
-        tenir dans le temps, mais possèdent un coût onéreux à l’achat. Les montres à gousset pour hommes peuvent être
-        portées par la gent féminine aussi bien que les montres à gousset pour femme peuvent être choisies par des
-        hommes.</p>
-      <img src="assets/images/luxe.jpg" alt="">
+      <div class="style__description style1">
+        <p class="style__content ">Rechercher des montres à gousset de luxe aux métaux nobles tels que l’or ou
+          l’argent
+          possèdent l’avantage de
+          tenir dans le temps, mais possèdent un coût onéreux à l’achat. Les montres à gousset pour hommes peuvent
+          être
+          portées par la gent féminine aussi bien que les montres à gousset pour femme peuvent être choisies par des
+          hommes.</p>
+        <img class="style__image" src="assets/images/luxe.jpg" alt="">
+      </div>
+
     </div>
   </section>
 
-  <section class="accessories">
-    <h1 class="accessories__title">Une montre personnalisée</h1>
-    <div class="accessory">
-      <h2 class="accessory__title">Chaîne</h2>
-      <p></p>
-    </div>
-    <div class="accessory">
-      <h2 class="accessory__title">Clapet</h2>
-      <p></p>
+  <section class="list" id="list">
+    <h1 class="list__title">Une montre personnalisée</h1>
+    <p class="list__text">Bien que la chaîne d'origine livrée avec la montre à gousset peut être tout à fait
+      opérationnelle, il peut
+      arriver que dans certains cas, celle-ci ne corresponde pas à votre style ou à votre manière de porter la montre
+      à gousset. Il existe différents types de chaînes pour montres à gousset que vous pouvez choisir selon vos goûts et
+      vos couleurs.
+    </p>
+
+    <div class="list_images">
+      <h2 class="list__name">Quelques montres à gousset pour vous</h2>
+      <div class="list_content">
+        <img src="assets/images/grid/1.jpg" alt="montre1 grille image">
+        <img src="assets/images/grid/2.jpg" alt="montre2 grille image">
+        <img src="assets/images/grid/3.jpg" alt="montre3 grille image">
+        <img src="assets/images/grid/4.jpg" alt="montre4 grille image">
+        <img src="assets/images/grid/5.jpg" alt="montre5 grille image">
+        <img src="assets/images/grid/6.jpg" alt="montre6 grille image">
+        <img src="assets/images/grid/7.jpg" alt="montre7 grille image">
+        <img src="assets/images/grid/8.jpg" alt="montre8 grille image">
+        <img src="assets/images/grid/9.jpg" alt="montre9grille image">
+      </div>
+      <p class="list__contact">N'hésitez pas à nous contacter à l'adresse mail suivante : </p>
+
+      <p class="list__contact contact">montre_gousset@montre.fr</p>
     </div>
 
   </section>
-  <footer>
 
+  <footer class="footer">
+    <div class="footer__menu">
+      <ul class="footer__liens">
+        <li class="footer__link"><a href="#">Retour en haut de la page</a></li>
+        <li class="footer__link"><a href="https://pixabay.com/fr/">Pixabay : photos</a> </li>
+        <li class="footer__link"> <a href="#presentation">Histoire des montres</a></li>
+
+      </ul>
+      <p class="footer__copyrigth">No copyright 2020 by Gwladys SETTE</p>
+    </div>
   </footer>
 
 </body>
